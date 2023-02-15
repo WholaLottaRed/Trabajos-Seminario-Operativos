@@ -3,9 +3,8 @@ Ruben Gamaliel Reyes Gómez
 218744554
 Seminario de Sistemas Operativos
 """
-
-with open("prueba2.txt","r") as archivo:
-
+with open("copia.txt","r") as archivo:
+   
     archivo2=open("archivo.txt","w")
     for linea in archivo:
         decimal=[]
@@ -40,3 +39,17 @@ with open("prueba2.txt","r") as archivo:
         archivo2.write(nueva_linea + '\n')
 
 archivo2.close()
+
+with open("copia.txt","w") as archivo :
+    archivo2=open("archivo.txt","r")
+    archivo.write(archivo2.read())
+
+print("Desea reiniciar el archivo de copia para hacer el proceso de nuevo?")
+respuesta = input()
+
+if respuesta in ['si','y','yes',1]:
+    with open("copia.txt","w") as archivo:
+        with open("prueba2.txt","r") as original:
+            archivo.write(original.read())
+else:
+    print("hasta luego")
