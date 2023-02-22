@@ -1,3 +1,9 @@
+"""Practica 2 por Ruben Gamaliel Reyes Gomez
+Codigo: 218744554
+"""
+
+
+
 import os
 from os import path
 from random import seed
@@ -5,9 +11,7 @@ import random
 from random import randint
 import string
 import re
-# seed random number generator
 seed(1)
-# generate random numbers between 0-1
 def generar_numero_random():
     for _ in range(10):
         value = randint(0,9)
@@ -55,20 +59,7 @@ def recorrer_carperta(ruta,ruta_copia):
 os.chdir(ruta_original)
 recorrer_carperta(ruta_original,ruta_copia)
 
-# for archivo in os.listdir():
-#     if os.path.isdir(archivo):
-#         carpeta_madre = os.getcwd()
-#         subcarpeta = carpeta_madre + "/"+archivo
-#         os.chdir(subcarpeta)
-#         print(os.getcwd())
-#         print(carpeta_madre)
-#     else:
-#         copia=modificar_contenido_archivo(archivo)
-#         print(os.getcwd())
-#         os.chdir(ruta_copia)
-#         with open(os.path.basename(archivo),"w") as archivo_copia:
-#             archivo_copia.write(copia)
-#         os.chdir(ruta_original)
+
     
         
 
